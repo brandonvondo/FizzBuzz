@@ -1,0 +1,35 @@
+﻿
+.maincontainer {
+    margin: 0 auto;
+    border: 1px solid black;
+    padding: 25px;
+}
+
+.btnwide {
+    margin-top:5%;
+    margin-left: 10%;
+    width: 30%;
+}
+
+.btnwide2 {
+    margin-top: 5%;
+    margin-left: 25%;
+    width: 30%;
+}
+
+#inpbuzz {
+    margin-left: 40px;
+}
+
+.fizzword {
+    color: mediumpurple;
+    font-weight: bold;
+}
+
+.buzzword{
+    color:orange;
+    font-weight:bold;
+}
+#fbout{
+    
+}
