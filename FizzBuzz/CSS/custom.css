@@ -76,12 +76,11 @@ body
 
 .fizzword {
     color: mediumpurple;
-    font-weight: bold;
 }
 
 .buzzword{
     color:orange;
-    font-weight:bold;
+    font-family:Cyberpunks;
 }
 
 
@@ -140,7 +139,7 @@ body
 
 .navtext3 {
     color: #BC4B00;
-    font-size: 15px;
+    font-size: 20px;
     font-family: 'Cyberpunks';
     margin: 50% auto;
 }
@@ -203,7 +202,7 @@ body
 }
 
 .bodyp2 {
-    font-size: 20px;
+    font-size: 25px;
     font-family: 'Cyberpunks';
     margin-top: 1%;
     margin-left: 25%;
@@ -211,6 +210,7 @@ body
     text-align: center;
     background-color: #213045;
     opacity: .7;
+    font-weight:lighter;
     color: #BC4B00;
 }
 
@@ -307,4 +307,13 @@ input:focus {
 
 .bgblue {
     background-color: #091930;
+}
+
+.fix {
+    position: fixed;
+    bottom: 5%;
+}
+
+.nopad{
+    padding:0px !important;
 }

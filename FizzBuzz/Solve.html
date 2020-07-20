@@ -47,7 +47,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="https://github.com/brandonvondo" target="_blank" title="My GitHub"><span class="navtext">Git</span></a>
                     </li>
-                    <li class="nav-item dropup">
+                    <li class="nav-item dropup nopad">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="navtext3">My Other Work</span>
                         </a>
@@ -70,8 +70,8 @@
     <div class="header2"><span class="fizzword">Fizz</span> <span class="buzzword">Buzz</span></div>
     <div id="panel">The fizz buzz algorithm allows the user to input 2 integers that will be called "fizz number" and "fuzz number". When the app is started it runs a loop 1-100, it is determined if mod loop is 0 for each integer. If fizz num mod loop is 0 it is a "fizz" and if buzz num mod loop is 0 it is a "buzz". If both happen it is a fizz buzz!.</div>
     <div id="flip">Click to toggle info</div>
-    <div class="container maincontainer">
-        <div class="row">
+    <div class="container">
+        <div class="row maincontainer">
             <div class="col-4">
                 <p>
                     <input id="inpfizz" class="inp" placeholder="Enter fizz number" /> <br />
@@ -85,16 +85,12 @@
                 </p>
             </div>
             <div class="col-4">
-                <p class="text-center">Length<br /><input id="inpleng" class="inp" placeholder="Default: 100" value="100" /></p>
+                <p class="text-center buzzword">Length<br /><input id="inpleng" class="inp" placeholder="Default: 100" value="100" /></p>
             </div>
         </div>
-        <hr />
-
-
-        <div class="row">
-            <p id="fbout" class="text-center bodyp2"></p>
+        <div class="row outsec">
+            <p id="fbout" class="text-center outsec bodyp2"></p>
         </div>
-    </div>
     </div>
     <!-- Bootstrap core JavaScript -->
     <script src="JS/jquery-3.5.1.min.js"></script>
@@ -102,6 +98,7 @@
     <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script>
         $("#panel").hide();
+        $("#outsec").hide();
 
         $(".inp").on("keydown", function (e) { /*simple input verification that allows numbers tab and backspace*/
             return ((e.keyCode >= 48 && e.keyCode <= 57) || (e.keyCode >= 96 && e.keyCode <= 105) || e.keyCode == 8 || e.keyCode == 9);
@@ -130,21 +127,23 @@
                     if (i % fizznum !== 0 && i % buzznum !== 0) { /*if neither are variables we pass our loop value into the var output*/
                         output += i;
                     }
-                    if (i % fizznum === 0 && i % buzznum === 0) { /*if neither are variables we pass our loop value into the var output*/
-                        output += i;
+                    if (i % fizznum === 0 && i % buzznum === 0) { 
                         fizzbuzzc += 1;
                     }
                     result.push(output) /*we are pushing the var output into our array result we created earlier*/
                 }
+                //$("#outsec").show();
                 var print = result.join(", "); /*we are making our array into a string and joining it with a comma/ space*/
                 $("#fbout").html(`${print} <br /> <span class="fizzword">Fizz</span> count: ${fizzc} <span class="buzzword">Buzz</span> count: ${buzzc} <span class="fizzword">Fizz</span><span class="buzzword">Buzz</span> count: ${fizzbuzzc}`);
             } /*last we put our finalized print variable into our output field this is joined with a message totalling our fizzes and buzzes*/
-            else $("#fbout").html(`Please enter valid numbers.`) /*error message when submitting with blank fields*/
+            else $("#fbout").html(`Please enter valid numbers.`); /*error message when submitting with blank fields*/
+            //$("#outsec").show();
         });
 
         $("#btnclear").on("click", function () { /*simple button to clear the results and the input field*/
             $(".inp").val("");
             $("#fbout").text("");
+            $("#outsec").hide();
         });
 
          $(document).ready(function () {
