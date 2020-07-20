@@ -1,8 +1,61 @@
-﻿
-.maincontainer {
-    margin: 0 auto;
-    border: 1px solid black;
-    padding: 25px;
+﻿@font-face {
+    font-family: 'Plank';
+    src: url('../fonts/PLANK___.TTF') format('truetype');
+}
+
+@font-face {
+    font-family: 'Cyberpunks';
+    src: url('../fonts/Cyberpunks.ttf') format('truetype');
+}
+body 
+{
+    background: linear-gradient(270deg, #adb2bb, #122641, #122c52);
+    background-size: 600% 600%;
+    -webkit-animation: lights 10s ease infinite;
+    -moz-animation: lights 10s ease infinite;
+    animation: lights 10s ease infinite;
+}
+
+@-webkit-keyframes lights {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-moz-keyframes lights {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@keyframes lights {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
 }
 
 .btnwide {
@@ -30,6 +83,228 @@
     color:orange;
     font-weight:bold;
 }
-#fbout{
-    
+
+
+.maincontainer {
+    margin-top: 0 auto;
+    border: 1px solid #091935;
+    padding: 25px;
+    background-color: #091930;
+}
+
+.btnwide {
+    margin-left: 100px;
+    width: 50%;
+}
+
+#fbout {
+    width: 50%;
+    margin: 50px auto;
+}
+
+.inph {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+
+.header {
+    padding: 60px;
+    text-align: center;
+    color: #9D8285;
+    font-size: 80px;
+    background-color: #091930;
+    font-family: 'Plank';
+}
+
+.header2 {
+    padding: 10px;
+    text-align: center;
+    color: #6A27AC;
+    font-size: 80px;
+    background-color: #091930;
+    font-family: 'Plank';
+}
+
+.navtext {
+    color: #BC4B00;
+    font-size: 20px;
+    font-family: 'Cyberpunks';
+}
+
+.navtext2 {
+    color: dimgrey;
+    font-size: 15px;
+    font-family: 'Cyberpunks'
+}
+
+.navtext3 {
+    color: #BC4B00;
+    font-size: 15px;
+    font-family: 'Cyberpunks';
+    margin: 50% auto;
+}
+
+.nopadding {
+    padding: 0;
+}
+
+.dropup {
+    list-style: none;
+    background: #091930;
+    padding: 8px;
+    display: inline-block;
+}
+
+.dropdown .nav-link {
+    color: #091930;
+    text-decoration: none;
+}
+
+.dropdown .dropdown-menu a {
+    color: #091930;
+    background-color: #091930;
+    text-decoration: none;
+}
+
+.dropdown-menu {
+    background-color: #091930;
+}
+
+    .dropdown-menu .dropdown-item {
+        display: inline-block;
+        background-color: #091930;
+        width: 100%;
+        padding: 10px 5px;
+    }
+
+.container .dropdown .dropdown-menu a:hover {
+    color: #fff;
+    background-color: #b91773;
+    background-color: #091930;
+    border-color: #fff;
+}
+
+.dropdown-divider {
+    background-color: #9D8285;
+    color: #9D8285;
+}
+
+.bodyp {
+    font-size: 40px;
+    font-family: 'Cyberpunks';
+    margin-top: 10%;
+    margin-left: 25%;
+    margin-right: 25%;
+    text-align: center;
+    background-color: #213045;
+    opacity: .7;
+    color: #BC4B00;
+}
+
+.bodyp2 {
+    font-size: 20px;
+    font-family: 'Cyberpunks';
+    margin-top: 1%;
+    margin-left: 25%;
+    margin-right: 25%;
+    text-align: center;
+    background-color: #213045;
+    opacity: .7;
+    color: #BC4B00;
+}
+
+#inpfizzbuzz {
+    padding: 1px;
+    text-align: center;
+    background-color: #091930;
+    font-family: 'Cyberpunks';
+    color: #9D8285;
+    font-size: 30px;
+    font-weight: bold;
+    box-shadow: none;
+}
+
+.inp {
+    padding: 1px;
+    text-align: center;
+    background-color: #3F3F3F;
+    font-family: 'Cyberpunks';
+    color: #A277CB;
+    font-size: 22px;
+    box-shadow: none;
+    width: 70%;
+}
+
+
+.inp::placeholder {
+    color: #A277CB;
+}
+
+.centerforce {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+html {
+    height: 100%;
+}
+
+#panel, #flip {
+    padding: 5px;
+    text-align: center;
+    background-color: #091930;
+    border: solid 1px purple;
+    color: #BC4B00;
+    font-family: 'Cyberpunks';
+    font-size: 30px;
+}
+
+#panel {
+    padding: 50px;
+}
+
+input:focus {
+    outline-width: 0;
+}
+
+#btnfizzbuzz:hover {
+    color: #A277CB !important;
+}
+
+#btnclear:hover {
+    color: #BC4B00 !important;
+}
+
+#btnfizzbuzz:focus {
+    color: #A277CB !important;
+}
+
+#btnclear:focus {
+    color: #BC4B00 !important;
+}
+
+#btnfizzbuzz {
+    background-color: #384558;
+    color: #A277CB;
+    font-family: 'Cyberpunks';
+    font-size: 20px;
+}
+
+#btnclear {
+    background-color: #384558;
+    color: #BC4B00;
+    font-family: 'Cyberpunks';
+    font-size: 20px;
+}
+
+.botsimage {
+    margin-left:20%;
+    margin-top: 5vh;
+    height: 40vw;
+}
+
+.bgblue {
+    background-color: #091930;
 }
